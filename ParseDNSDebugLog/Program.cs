@@ -59,11 +59,10 @@ namespace DNSDebugLogHandler
 
                 if (m.Success)
                 {
-                    DateTime.TryParse(m.Groups["date"].Value.Trim(), out DateTime dt);
                     DNSLogEntry entry = new DNSLogEntry
                     {
                         ClientIP = m.Groups["ip"].Value.Trim(),
-                        DateTime = dt,
+                        DateTime = DateTime.TryParse(m.Groups["date"].Value.Trim(), out DateTime dt) ? dt : DateTime.MinValue,
                         QR = DNSLogEntry.ParseQR(m.Groups["QR"].Value),
                         OpCode = DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value),
                         Way = m.Groups["way"].Value.Trim(),
