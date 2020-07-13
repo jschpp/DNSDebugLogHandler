@@ -4,7 +4,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 
 
-namespace ParseDNSDebugLog
+namespace DNSDebugLogHandler
 {
     [Cmdlet(VerbsData.Import, "DNSDebugLog")]
     public class ImportDNSDebugLog : Cmdlet
@@ -56,17 +56,21 @@ namespace ParseDNSDebugLog
             while ((line = file.ReadLine()) != null)
             {
                 Match m = rgx.Match(line);
+
                 if (m.Success)
                 {
-                    DNSLogEntry.DNSLogEntry entry = new DNSLogEntry.DNSLogEntry();
-                    entry.ClientIP = m.Groups["ip"].Value.Trim();
                     DateTime.TryParse(m.Groups["date"].Value.Trim(), out DateTime dt);
-                    entry.DateTime = dt;
-                    entry.QR = DNSLogEntry.DNSLogEntry.ParseQR(m.Groups["QR"].Value);
-                    entry.OpCode = DNSLogEntry.DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value);
-                    entry.Way = m.Groups["way"].Value.Trim();
-                    entry.QuestionType = m.Groups["QuestionType"].Value.Trim();
-                    entry.Query = m.Groups["query"].Value.Trim();
+                    DNSLogEntry entry = new DNSLogEntry
+                    {
+                        ClientIP = m.Groups["ip"].Value.Trim(),
+                        DateTime = dt,
+                        QR = DNSLogEntry.ParseQR(m.Groups["QR"].Value),
+                        OpCode = DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value),
+                        Way = m.Groups["way"].Value.Trim(),
+                        QuestionType = m.Groups["QuestionType"].Value.Trim(),
+                        Query = m.Groups["query"].Value.Trim()
+                    };
+
                     try
                     {
                         WriteObject(entry);
@@ -75,6 +79,9 @@ namespace ParseDNSDebugLog
                         file.Dispose();
                         break;
                     }
+                } else
+                {
+                    WriteDebug(string.Format("Could not parse row: <{0}>", line));
                 }
             }
         }
@@ -87,9 +94,7 @@ namespace ParseDNSDebugLog
             }
         }
     }
-}
 
- namespace DNSLogEntry { 
     public class DNSLogEntry
     {
         public string ClientIP { get; set; }
@@ -102,24 +107,26 @@ namespace ParseDNSDebugLog
 
         public static string ParseQR ( string QR)
         {
-            switch (QR.ToLower())
+            return (QR.ToLower()) switch
             {
-                case " ": return "Query";
-                case "R": return "Response";
-            }
-            return "ParseError";
+                " " => "Query",
+                "R" => "Response",
+                // This should never happen
+                _ => string.Format("ParseError <{0}>", QR.Trim())
+            };
         }
 
         public static string ParseOpCode(string OP)
         {
-            switch (OP.Trim().ToLower())
+            return (OP.Trim().ToLower()) switch
             {
-                case "q": return "Standard Query";
-                case "n": return "Notify";
-                case "u": return "Update";
-                case "?": return "Unknown";
-            }
-            return "ParseError";
+                "q" => "Standard Query",
+                "n" => "Notify",
+                "u" => "Update",
+                "?" => "Unknown",
+                // This should never happen
+                _ => string.Format("ParseError <{0}>", OP.Trim())
+            };
         }
     }
 }

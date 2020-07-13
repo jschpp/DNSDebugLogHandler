@@ -5,6 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <ApplicationIcon />
     <StartupObject />
+    <AssemblyName>DNSDebugLogHandler</AssemblyName>
+    <RootNamespace>DNSDebugLogHandler</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
