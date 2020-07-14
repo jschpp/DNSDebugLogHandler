@@ -77,17 +77,7 @@ namespace DNSDebugLogHandler
                         QuestionType = m.Groups["QuestionType"].Value.Trim(),
                         Question = m.Groups["Question"].Value.Trim()
                     };
-
-                    try
-                    {
-                        WriteObject(entry);
-                    }
-                    catch (System.Management.Automation.PipelineStoppedException)
-                    {
-                        // This is needed if someone prematurely closes the pipe with CTRL-C or Select-Object -First
-                        file.Dispose();
-                        break;
-                    }
+                    WriteObject(entry);
                 }
                 else
                 {
