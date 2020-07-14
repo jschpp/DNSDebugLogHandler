@@ -131,28 +131,36 @@ namespace DNSDebugLogHandler
         public string QuestionType { get; set; }
         public string Query { get; set; }
 
-        public static string ParseQR ( string QR)
+        public static string ParseQR(string QR)
         {
-            return (QR.ToLower()) switch
+            if (QR != null)
             {
-                " " => "Query",
-                "R" => "Response",
-                // This should never happen
-                _ => string.Format("ParseError <{0}>", QR.Trim())
-            };
+                return (QR.ToLower()) switch
+                {
+                    " " => "Query",
+                    "R" => "Response",
+                    // This should never happen
+                    _ => string.Format("ParseError <{0}>", QR.Trim())
+                };
+            }
+            throw new ArgumentNullException(nameof(QR));
         }
 
         public static string ParseOpCode(string OP)
         {
-            return (OP.Trim().ToLower()) switch
+            if (OP != null)
             {
-                "q" => "Standard Query",
-                "n" => "Notify",
-                "u" => "Update",
-                "?" => "Unknown",
-                // This should never happen
-                _ => string.Format("ParseError <{0}>", OP.Trim())
-            };
+                return (OP.Trim().ToLower()) switch
+                {
+                    "q" => "Standard Query",
+                    "n" => "Notify",
+                    "u" => "Update",
+                    "?" => "Unknown",
+                    // This should never happen
+                    _ => string.Format("ParseError <{0}>", OP.Trim())
+                };
+            }
+            throw new ArgumentNullException(nameof(OP));
         }
     }
 }
