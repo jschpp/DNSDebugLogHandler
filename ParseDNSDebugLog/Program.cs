@@ -3,13 +3,13 @@ using System.Management.Automation;
 using System.IO;
 using System.Text.RegularExpressions;
 
-
 namespace DNSDebugLogHandler
 {
-    [Cmdlet(VerbsData.Import, "DNSDebugLog")]
+    [Cmdlet(VerbsData.Import, "DNSDebugLog", ConfirmImpact = ConfirmImpact.None)]
     public class ImportDNSDebugLog : Cmdlet, IDisposable
     {
         [Parameter(Position = 1, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true, Mandatory = true)]
+        [ValidateNotNullOrEmpty()]
         public string Path { get; set; }
 
         private const string regexPattern = @"^(?<date>([0-9]{1,2}.[0-9]{1,2}.[0-9]{2,4}|[0-9]{2,4}-[0-9]{2}-[0-9]{2})\s*[0-9: ]{7,8}\s*(PM|AM)?) ([0-9A-Z]{3,4} PACKET\s*[0-9A-Za-z]{8,16}) (UDP|TCP) (?<way>Snd|Rcv) (?<ip>[0-9.]{7,15}|[0-9a-f:]{3,50})\s*([0-9a-z]{4}) (?<QR>.) (?<OpCode>.) \[.*\] (?<QuestionType>.*) (?<query>\(.*)";
