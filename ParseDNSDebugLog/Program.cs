@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 namespace DNSDebugLogHandler
 {
     [Cmdlet(VerbsData.Import, "DNSDebugLog")]
-    public class ImportDNSDebugLog : Cmdlet
+    public class ImportDNSDebugLog : Cmdlet, IDisposable
     {
         [Parameter(Position = 1, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true, Mandatory = true)]
         public string Path { get; set; }
@@ -91,6 +91,28 @@ namespace DNSDebugLogHandler
             {
                 file.Dispose();
             }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing == true)
+            {
+                if (file != null)
+                {
+                    file.Dispose();
+                }
+            }
+        }
+
+        ~ImportDNSDebugLog()
+        {
+            Dispose(false);
         }
     }
 
