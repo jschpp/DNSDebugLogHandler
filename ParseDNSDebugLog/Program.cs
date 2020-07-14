@@ -6,11 +6,11 @@ using System.Text.RegularExpressions;
 namespace DNSDebugLogHandler
 {
     [Cmdlet(VerbsData.Import, "DNSDebugLog", ConfirmImpact = ConfirmImpact.None)]
-    public class ImportDNSDebugLog : PSCmdlet, IDisposable
+    public class ImportDNSDebugLog : Cmdlet, IDisposable
     {
         [Parameter(Position = 1, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true, Mandatory = true)]
         [ValidateNotNullOrEmpty()]
-        public string[] Path { get; set; }
+        public string Path { get; set; }
 
         private const string regexPattern = @"^(?<date>([0-9]{1,2}.[0-9]{1,2}.[0-9]{2,4}|[0-9]{2,4}-[0-9]{2}-[0-9]{2})\s*[0-9: ]{7,8}\s*(PM|AM)?) ([0-9A-Z]{3,4} PACKET\s*[0-9A-Za-z]{8,16}) (UDP|TCP) (?<way>Snd|Rcv) (?<ip>[0-9.]{7,15}|[0-9a-f:]{3,50})\s*([0-9a-z]{4}) (?<QR>.) (?<OpCode>.) \[.*\] (?<QuestionType>.*) (?<query>\(.*)";
 
@@ -20,85 +20,76 @@ namespace DNSDebugLogHandler
 
         protected override void BeginProcessing()
         {
+            try
+            {
+                file = new StreamReader(Path);
+            }
+            catch (FileNotFoundException ex)
+            {
+                var errorRecord = new ErrorRecord(
+                    ex,
+                    "FileNotFound",
+                    ErrorCategory.ObjectNotFound,
+                    Path);
+                WriteError(errorRecord);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                var errorRecord = new ErrorRecord(
+                    ex,
+                    "UnauthorizedAccessError",
+                    ErrorCategory.InvalidData,
+                    Path);
+                WriteError(errorRecord);
+            }
+            catch (IOException ioException)
+            {
+                var errorRecord = new ErrorRecord(
+                    ioException,
+                    "FileReadError",
+                    ErrorCategory.ReadError,
+                    Path);
+                WriteError(errorRecord);
+            }
+
             rgx = new Regex(regexPattern);
         }
 
         protected override void ProcessRecord()
         {
-            foreach (string Filename in Path)
+            string line;
+            while ((line = file.ReadLine()) != null)
             {
-                string tmpFileName = Filename;
-                if (!File.Exists(Filename))
-                {
-                    tmpFileName = GetUnresolvedProviderPathFromPSPath(Filename);
-                }
-                try
-                {
-                    file = new StreamReader(tmpFileName);
-                }
-                catch (FileNotFoundException ex)
-                {
-                    var errorRecord = new ErrorRecord(
-                        ex,
-                        "FileNotFound",
-                        ErrorCategory.ObjectNotFound,
-                        Path);
-                    this.ThrowTerminatingError(errorRecord);
-                }
-                catch (UnauthorizedAccessException ex)
-                {
-                    var errorRecord = new ErrorRecord(
-                        ex,
-                        "UnauthorizedAccessError",
-                        ErrorCategory.InvalidData,
-                        Path);
-                    this.ThrowTerminatingError(errorRecord);
-                }
-                catch (IOException ioException)
-                {
-                    var errorRecord = new ErrorRecord(
-                        ioException,
-                        "FileReadError",
-                        ErrorCategory.ReadError,
-                        Path);
-                    this.ThrowTerminatingError(errorRecord);
-                }
+                Match m = rgx.Match(line);
 
-                string line;
-                while ((line = file.ReadLine()) != null)
+                if (m.Success)
                 {
-                    Match m = rgx.Match(line);
-
-                    if (m.Success)
+                    DNSLogEntry entry = new DNSLogEntry
                     {
-                        DNSLogEntry entry = new DNSLogEntry
-                        {
-                            ClientIP = m.Groups["ip"].Value.Trim(),
-                            DateTime = DateTime.TryParse(m.Groups["date"].Value.Trim(), out DateTime dt) ? dt : DateTime.MinValue,
-                            QR = DNSLogEntry.ParseQR(m.Groups["QR"].Value),
-                            OpCode = DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value),
-                            Way = m.Groups["way"].Value.Trim(),
-                            QuestionType = m.Groups["QuestionType"].Value.Trim(),
-                            Query = m.Groups["query"].Value.Trim()
-                        };
+                        ClientIP = m.Groups["ip"].Value.Trim(),
+                        DateTime = DateTime.TryParse(m.Groups["date"].Value.Trim(), out DateTime dt) ? dt : DateTime.MinValue,
+                        QR = DNSLogEntry.ParseQR(m.Groups["QR"].Value),
+                        OpCode = DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value),
+                        Way = m.Groups["way"].Value.Trim(),
+                        QuestionType = m.Groups["QuestionType"].Value.Trim(),
+                        Query = m.Groups["query"].Value.Trim()
+                    };
 
-                        try
-                        {
-                            WriteObject(entry);
-                        }
-                        catch (System.Management.Automation.PipelineStoppedException)
-                        {
-                            // This is needed if someone prematurely closes the pipe with CTRL-C or Select-Object -First
-                            file.Dispose();
-                            break;
-                        }
+                    try
+                    {
+                        WriteObject(entry);
                     }
-                    else
+                    catch (System.Management.Automation.PipelineStoppedException)
                     {
-                        WriteDebug(string.Format("Could not parse row: <{0}>", line));
+                        // This is needed if someone prematurely closes the pipe with CTRL-C or Select-Object -First
+                        file.Dispose();
+                        break;
                     }
                 }
-                file.Close();
+                else
+                {
+                    WriteDebug(string.Format("Could not parse row: <{0}>", line));
+                }
             }
         }
 
