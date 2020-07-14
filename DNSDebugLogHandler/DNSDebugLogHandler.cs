@@ -20,10 +20,9 @@ namespace DNSDebugLogHandler
 
         protected override void BeginProcessing()
         {
-            if (!File.Exists(Path))
-            {
-                Path = GetUnresolvedProviderPathFromPSPath(Path);
-            }
+            // always resolve path to handle PS specific paths and relative paths
+            Path = GetUnresolvedProviderPathFromPSPath(Path);
+
             try
             {
                 file = new StreamReader(Path);
