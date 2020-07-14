@@ -12,7 +12,7 @@ namespace DNSDebugLogHandler
         [ValidateNotNullOrEmpty()]
         public string Path { get; set; }
 
-        private const string regexPattern = @"^(?<date>([0-9]{1,2}.[0-9]{1,2}.[0-9]{2,4}|[0-9]{2,4}-[0-9]{2}-[0-9]{2})\s*[0-9: ]{7,8}\s*(PM|AM)?) ([0-9A-Z]{3,4} PACKET\s*[0-9A-Za-z]{8,16}) (UDP|TCP) (?<way>Snd|Rcv) (?<ip>[0-9.]{7,15}|[0-9a-f:]{3,50})\s*([0-9a-z]{4}) (?<QR>.) (?<OpCode>.) \[.*\] (?<QuestionType>.*) (?<query>\(.*)";
+        private const string regexPattern = @"^(?<date>([0-9]{1,2}.[0-9]{1,2}.[0-9]{2,4}|[0-9]{2,4}-[0-9]{2}-[0-9]{2})\s*[0-9: ]{7,8}\s*(PM|AM)?) ([0-9A-Z]{3,4} PACKET\s*[0-9A-Za-z]{8,16}) (UDP|TCP) (?<way>Snd|Rcv) (?<ip>[0-9.]{7,15}|[0-9a-f:]{3,50})\s*([0-9a-z]{4}) (?<QR>.) (?<OpCode>.) \[.*\] (?<QuestionType>.*) (?<Question>\(.*)";
 
         private Regex rgx;
 
@@ -76,7 +76,7 @@ namespace DNSDebugLogHandler
                         OpCode = DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value),
                         Way = m.Groups["way"].Value.Trim(),
                         QuestionType = m.Groups["QuestionType"].Value.Trim(),
-                        Query = m.Groups["query"].Value.Trim()
+                        Question = m.Groups["Question"].Value.Trim()
                     };
 
                     try
@@ -136,7 +136,7 @@ namespace DNSDebugLogHandler
         public string OpCode { get; set; }
         public string Way { get; set; }
         public string QuestionType { get; set; }
-        public string Query { get; set; }
+        public string Question { get; set; }
 
         public static string ParseQR(string QR)
         {
