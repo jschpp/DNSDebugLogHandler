@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace DNSDebugLogHandler
 {
     [Cmdlet(VerbsData.Import, "DNSDebugLog", ConfirmImpact = ConfirmImpact.None)]
-    public class ImportDNSDebugLog : Cmdlet, IDisposable
+    public class ImportDNSDebugLog : PSCmdlet, IDisposable
     {
         [Parameter(Position = 1, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true, Mandatory = true)]
         [ValidateNotNullOrEmpty()]
@@ -20,6 +20,10 @@ namespace DNSDebugLogHandler
 
         protected override void BeginProcessing()
         {
+            if (!File.Exists(Path))
+            {
+                Path = GetUnresolvedProviderPathFromPSPath(Path);
+            }
             try
             {
                 file = new StreamReader(Path);
