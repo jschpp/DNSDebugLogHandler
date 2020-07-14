@@ -35,7 +35,7 @@ namespace DNSDebugLogHandler
                     "FileNotFound",
                     ErrorCategory.ObjectNotFound,
                     Path);
-                WriteError(errorRecord);
+                this.ThrowTerminatingError(errorRecord);
             }
             catch (UnauthorizedAccessException ex)
             {
@@ -44,7 +44,7 @@ namespace DNSDebugLogHandler
                     "UnauthorizedAccessError",
                     ErrorCategory.InvalidData,
                     Path);
-                WriteError(errorRecord);
+                this.ThrowTerminatingError(errorRecord);
             }
             catch (IOException ioException)
             {
@@ -53,7 +53,7 @@ namespace DNSDebugLogHandler
                     "FileReadError",
                     ErrorCategory.ReadError,
                     Path);
-                WriteError(errorRecord);
+                this.ThrowTerminatingError(errorRecord);
             }
 
             rgx = new Regex(regexPattern);
