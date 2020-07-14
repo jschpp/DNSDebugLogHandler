@@ -78,12 +78,15 @@ namespace DNSDebugLogHandler
                     try
                     {
                         WriteObject(entry);
-                    } catch (System.Management.Automation.PipelineStoppedException) {
+                    }
+                    catch (System.Management.Automation.PipelineStoppedException)
+                    {
                         // This is needed if someone prematurely closes the pipe with CTRL-C or Select-Object -First
                         file.Dispose();
                         break;
                     }
-                } else
+                }
+                else
                 {
                     WriteDebug(string.Format("Could not parse row: <{0}>", line));
                 }
