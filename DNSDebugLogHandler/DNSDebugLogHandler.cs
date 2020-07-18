@@ -147,12 +147,12 @@ namespace DNSDebugLogHandler
         {
             if (QR != null)
             {
-                return (QR.ToLower()) switch
+                switch (QR.ToLower())
                 {
-                    " " => "Query",
-                    "R" => "Response",
+                    case " " : return "Query";
+                    case "R" : return "Response";
                     // This should never happen
-                    _ => string.Format("ParseError <{0}>", QR.Trim())
+                    default : return string.Format("ParseError <{0}>", QR.Trim());
                 };
             }
             throw new ArgumentNullException(nameof(QR));
@@ -162,14 +162,14 @@ namespace DNSDebugLogHandler
         {
             if (OP != null)
             {
-                return (OP.Trim().ToLower()) switch
+                switch (OP.Trim().ToLower())
                 {
-                    "q" => "Standard Query",
-                    "n" => "Notify",
-                    "u" => "Update",
-                    "?" => "Unknown",
+                    case "q" : return "Standard Query";
+                    case "n" : return "Notify";
+                    case "u" : return "Update";
+                    case "?" : return "Unknown";
                     // This should never happen
-                    _ => string.Format("ParseError <{0}>", OP.Trim())
+                    default : return string.Format("ParseError <{0}>", OP.Trim());
                 };
             }
             throw new ArgumentNullException(nameof(OP));
