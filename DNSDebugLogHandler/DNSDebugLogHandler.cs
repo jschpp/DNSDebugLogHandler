@@ -16,7 +16,19 @@ namespace DNSDebugLogHandler
         [ValidateNotNullOrEmpty()]
         public string Path { get; set; }
 
-        private const string regexPattern = @"^(?<date>([0-9]{1,2}.[0-9]{1,2}.[0-9]{2,4}|[0-9]{2,4}-[0-9]{2}-[0-9]{2})\s*[0-9: ]{7,8}\s*(PM|AM)?) ([0-9A-Z]{3,4} PACKET\s*[0-9A-Za-z]{8,16}) (UDP|TCP) (?<way>Snd|Rcv) (?<ip>[0-9.]{7,15}|[0-9a-f:]{3,50})\s*([0-9a-z]{4}) (?<QR>.) (?<OpCode>.) \[.*\] (?<QuestionType>.*) (?<Question>\(.*)";
+        private const string regexPattern = @"^
+                                                                        # Date in multiple locales TODO: maybe use TryParse here and don't try regex
+            (?<date>([0-9]{1,2}.[0-9]{1,2}.[0-9]{2,4}|[0-9]{2,4}-[0-9]{2}-[0-9]{2})\s*[0-9: ]{7,8}\s*(PM|AM)?)\s
+            ([0-9A-Z]{3,4}\sPACKET\s*[0-9A-Za-z]{8,16})\s               # Packet information
+            (UDP|TCP)\s
+            (?<way>Snd|Rcv)\s
+            (?<ip>[0-9.]{7,15}|[0-9a-f:]{3,50})\s*([0-9a-z]{4})\s       # IP Address IPv4 or IPv6
+            (?<QR>.)\s
+            (?<OpCode>.)\s
+            \[.*\]\s
+            (?<QuestionType>.*)\s
+            (?<Question>\(.*)
+            ";
 
         private Regex rgx;
 
@@ -59,7 +71,7 @@ namespace DNSDebugLogHandler
                 this.ThrowTerminatingError(errorRecord);
             }
 
-            rgx = new Regex(regexPattern);
+            rgx = new Regex(regexPattern, RegexOptions.IgnorePatternWhitespace);
         }
 
         protected override void ProcessRecord()
