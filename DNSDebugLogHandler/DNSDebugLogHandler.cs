@@ -3,6 +3,10 @@ using System.Management.Automation;
 using System.IO;
 using System.Text.RegularExpressions;
 
+/* This module is based on the excellent DNSLogModule https://github.com/virot/DNSLogModule by virot https://github.com/virot
+ * It was ported with his permission.
+ */
+
 namespace DNSDebugLogHandler
 {
     [Cmdlet(VerbsData.Import, "DNSDebugLog", ConfirmImpact = ConfirmImpact.None)]
