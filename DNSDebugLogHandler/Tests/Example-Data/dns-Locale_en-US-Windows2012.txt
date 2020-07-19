@@ -1,0 +1,903 @@
+DNS Server log file creation at 6/20/2017 5:36:58 AM
+
+Message logging key (for packets - other items use a subset of these fields):
+	Field #  Information         Values
+	-------  -----------         ------
+	   1     Date
+	   2     Time
+	   3     Thread ID
+	   4     Context
+	   5     Internal packet identifier
+	   6     UDP/TCP indicator
+	   7     Send/Receive indicator
+	   8     Remote IP
+	   9     Xid (hex)
+	  10     Query/Response      R = Response
+	                             blank = Query
+	  11     Opcode              Q = Standard Query
+	                             N = Notify
+	                             U = Update
+	                             ? = Unknown
+	  12     [ Flags (hex)
+	  13     Flags (char codes)  A = Authoritative Answer
+	                             T = Truncated Response
+	                             D = Recursion Desired
+	                             R = Recursion Available
+	  14     ResponseCode ]
+	  15     Question Type
+	  16     Question Name
+
+6/20/2017 5:36:59 AM 0DF4 EVENT   The DNS server has started.
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             2de6   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             2de6 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    72e2   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    72e2 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             db6f   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             db6f R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    e5aa   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    e5aa R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    70f9   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    70f9 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             7250   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             7250 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    4e1a   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    4e1a R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             9e81   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             9e81 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    3cf1   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    3cf1 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    61e3   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    61e3 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             a8d6   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             a8d6 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    a3ef   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    a3ef R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             be05   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             be05 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    89a1   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    89a1 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    286f   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    286f R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             33e6   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             33e6 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    830e   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    830e R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             cbac   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             cbac R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    5719   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    5719 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    1fa7   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    1fa7 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             6e84   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(36)eda50056-e36e-443d-9a1a-9886b236acc1(7)domains(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             6e84 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(36)eda50056-e36e-443d-9a1a-9886b236acc1(7)domains(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    f6c3   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    f6c3 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             fa49   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             fa49 R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    083a   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    083a R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    86e0   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    86e0 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             abce   Q [0001   D   NOERROR] SOA    (36)e19293c8-5ca0-4cb9-a42a-f813bad20c0b(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             abce R Q [8085 A DR  NOERROR] SOA    (36)e19293c8-5ca0-4cb9-a42a-f813bad20c0b(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             e240   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             e240 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    81bf   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    81bf R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             9cef   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             9cef R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    5ae9   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    5ae9 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    cb10   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    cb10 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             117a   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             117a R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    5992   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    5992 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             d102   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             d102 R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    12f8   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    12f8 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    0311   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    0311 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             c246   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             c246 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    4018   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    4018 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             a981   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             a981 R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    eaac   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    eaac R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    c559   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    c559 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             0c4c   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             0c4c R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    f066   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    f066 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             f7f9   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             f7f9 R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    dce6   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    dce6 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    037a   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    037a R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             525c   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             525c R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    ae0d   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    ae0d R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             eb17   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             eb17 R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    2cb5   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    2cb5 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    cc1c   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    cc1c R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             72bd   Q [0001   D   NOERROR] SOA    (2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             72bd R Q [8085 A DR  NOERROR] SOA    (2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    9a33   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    9a33 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             52fe   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             52fe R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    ac8e   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    ac8e R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    bc99   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    bc99 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             846e   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             846e R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    e651   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    e651 R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             1a99   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             1a99 R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    750e   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    750e R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    68ea   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    68ea R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             dc6d   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             dc6d R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    6e0c   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    6e0c R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             879d   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             879d R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    5459   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    5459 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    1c8f   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    1c8f R U [02a8      SERVFAIL] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             07a2   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             07a2 R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    b5e0   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    b5e0 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             0b22   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             0b22 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    9d8c   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    9d8c R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    5de1   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    5de1 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             5f69   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             5f69 R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    de49   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    de49 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             884a   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             884a R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    94b0   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    94b0 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    a249   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    a249 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             ade7   Q [0001   D   NOERROR] SOA    (3)_gc(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             ade7 R Q [8085 A DR  NOERROR] SOA    (3)_gc(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    344e   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    344e R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             26a8   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             26a8 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    ec03   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    ec03 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    b739   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    b739 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             3063   Q [0001   D   NOERROR] SOA    (3)_gc(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             3063 R Q [8085 A DR  NOERROR] SOA    (3)_gc(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    c2fc   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    c2fc R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             337b   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             337b R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    635e   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    635e R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    0c1f   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    0c1f R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             dec2   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             dec2 R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    b733   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    b733 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             de28   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             de28 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    f9dd   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    f9dd R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    2eb6   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    2eb6 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             5002   Q [0001   D   NOERROR] SOA    (8)_kpasswd(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             5002 R Q [8085 A DR  NOERROR] SOA    (8)_kpasswd(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    8ae7   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    8ae7 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             c1d2   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             c1d2 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    bd7e   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    bd7e R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    eed8   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    eed8 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             dbdf   Q [0001   D   NOERROR] SOA    (8)_kpasswd(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             dbdf R Q [8085 A DR  NOERROR] SOA    (8)_kpasswd(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    3874   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    3874 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             4c5e   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             4c5e R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    f39a   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    f39a R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    6604   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    6604 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             22c7   Q [0001   D   NOERROR] SOA    (14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             22c7 R Q [8085 A DR  NOERROR] SOA    (14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    09b3   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    09b3 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             eac7   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             eac7 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    f64b   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    f64b R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    da22   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    da22 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             78d6   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             78d6 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    faee   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    faee R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             441c   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             441c R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    2c55   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    2c55 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    b5bd   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    b5bd R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             879c   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             879c R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    52e4   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    52e4 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             7d56   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             7d56 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    b438   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    b438 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    6b89   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    6b89 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             1f61   Q [0001   D   NOERROR] SOA    (14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             1f61 R Q [8085 A DR  NOERROR] SOA    (14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    966a   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    966a R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             4891   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             4891 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    31eb   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    31eb R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    6113   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    6113 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             1c9a   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             1c9a R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.81    3d46   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd 192.168.6.81    3d46 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             2b91   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             2b91 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    f58a   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    f58a R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    0264   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    0264 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             21d0   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             21d0 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    8549   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    8549 R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv ::1             3889   Q [0001   D   NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC98841A0 UDP Snd ::1             3889 R Q [8085 A DR  NOERROR] NS     (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.81    f720   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.81    f720 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    717a   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:36:59 AM 0E24 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    717a R U [02a8      SERVFAIL] SOA    (4)file(5)local(0)
+
+6/20/2017 5:37:00 AM 0E1C EVENT   The DNS server has finished the background loading and signing of zones. All zones are now available for DNS updates and zone transfers, as allowed by their individual zone configuration.
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009AC98841A0 UDP Rcv 192.168.6.86    556f   Q [0001   D   NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACED82460 UDP Snd 192.58.128.30   a614   Q [0000       NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACA7C3A40 UDP Rcv 192.58.128.30   a614 R Q [0080       NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACED82460 UDP Snd 192.26.92.30    d18d   Q [0000       NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACA6701C0 UDP Rcv 192.26.92.30    d18d R Q [0080       NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACEDB4BE0 UDP Snd 192.228.79.201  b0f8   Q [0000       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009AC987EC80 UDP Rcv 192.168.6.86    556f   Q [0001   D   NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACEDC5170 UDP Snd 192.203.230.10  d4c5   Q [0000       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACABCAC90 UDP Rcv 192.203.230.10  d4c5 R Q [0080       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACEDC5170 UDP Snd 192.48.79.30    c2cb   Q [0000       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACAADFD30 UDP Rcv 192.48.79.30    c2cb R Q [0080       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACEDC5170 UDP Snd 208.84.2.53     5e2b   Q [0000       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACA4F2380 UDP Rcv 192.228.79.201  b0f8 R Q [0080       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACEDB4BE0 UDP Snd 208.84.0.53     f8bb   Q [0000       NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACC4062C0 UDP Rcv 208.84.2.53     5e2b R Q [0084 A     NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACEDB68F0 UDP Snd 2620:0:34::53   8e81   Q [0000       NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:51 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv 208.84.0.53     f8bb R Q [0084 A     NOERROR] A      (3)ns3(4)msft(3)net(0)
+
+6/20/2017 5:39:52 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.86    556f   Q [0001   D   NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:54 AM 0E24 PACKET  0000009ACA6701C0 UDP Rcv 192.168.6.86    556f   Q [0001   D   NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:55 AM 0DF8 PACKET  0000009ACEDB68F0 UDP Snd 208.84.2.53     8e81   Q [0000       NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACBB341C0 UDP Rcv 208.84.2.53     8e81 R Q [0084 A     NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACEDB68F0 UDP Snd 192.12.94.30    0359   Q [0000       NOERROR] A      (10)asimov-win(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACBAC0A40 UDP Rcv 192.12.94.30    0359 R Q [0080       NOERROR] A      (10)asimov-win(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACEDB68F0 UDP Snd 193.108.88.128  11d7   Q [0000       NOERROR] A      (10)asimov-win(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACBA37600 UDP Rcv 193.108.88.128  11d7 R Q [0084 A     NOERROR] A      (10)asimov-win(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACEDB68F0 UDP Snd 23.61.199.131   3c2f   Q [0000       NOERROR] A      (3)geo(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACBDB8A90 UDP Rcv 23.61.199.131   3c2f R Q [0084 A     NOERROR] A      (3)geo(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACEDB68F0 UDP Snd 84.53.139.129   c958   Q [0000       NOERROR] A      (3)db5(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 84.53.139.129   c958 R Q [0084 A     NOERROR] A      (3)db5(6)vortex(4)data(9)microsoft(3)com(6)akadns(3)net(0)
+
+6/20/2017 5:39:55 AM 0E24 PACKET  0000009AC987EC80 UDP Snd 192.168.6.86    556f R Q [8081   DR  NOERROR] A      (10)vortex-win(4)data(9)microsoft(3)com(0)
+
+6/20/2017 5:40:15 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv 192.168.6.86    014a   Q [0001   D   NOERROR] A      (4)wpad(4)file(5)local(0)
+
+6/20/2017 5:40:15 AM 0E24 PACKET  0000009ACAB63A40 UDP Snd 192.168.6.86    014a R Q [8385 A DR NXDOMAIN] A      (4)wpad(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             4ec2   Q [0001   D   NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             4ec2 R Q [8085 A DR  NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    6ab7   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009AC987D020 UDP Snd 192.168.6.81    6ab7 R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             e2e2   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             e2e2 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.81    050b   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.81    050b R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv ::1             b082   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Snd ::1             b082 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    ac3c   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACED80750 UDP Snd 192.168.6.81    ac3c R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             9c6d   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             9c6d R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    5283   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    5283 R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv ::1             137f   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(36)eda50056-e36e-443d-9a1a-9886b236acc1(7)domains(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd ::1             137f R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(36)eda50056-e36e-443d-9a1a-9886b236acc1(7)domains(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv 192.168.6.81    57a7   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACAB63A40 UDP Snd 192.168.6.81    57a7 R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             0086   Q [0001   D   NOERROR] SOA    (36)e19293c8-5ca0-4cb9-a42a-f813bad20c0b(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             0086 R Q [8085 A DR  NOERROR] SOA    (36)e19293c8-5ca0-4cb9-a42a-f813bad20c0b(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             0621   Q [0001   D   NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             0621 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    554e   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    554e R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv ::1             e69e   Q [0001   D   NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Snd ::1             e69e R Q [8085 A DR  NOERROR] NS     (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             3b6d   Q [0001   D   NOERROR] CNAME  (36)e19293c8-5ca0-4cb9-a42a-f813bad20c0b(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             3b6d R Q [8085 A DR  NOERROR] CNAME  (36)e19293c8-5ca0-4cb9-a42a-f813bad20c0b(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             5bf9   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             5bf9 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.81    4694   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACB4762C0 UDP Snd 192.168.6.81    4694 R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv ::1             8415   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Snd ::1             8415 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    2173   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    2173 R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             06cd   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             06cd R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    ff8c   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009AC987D020 UDP Snd 192.168.6.81    ff8c R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv ::1             23d0   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd ::1             23d0 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv 192.168.6.81    1916   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009ACAB63A40 UDP Snd 192.168.6.81    1916 R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             b873   Q [0001   D   NOERROR] SOA    (2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             b873 R Q [8085 A DR  NOERROR] SOA    (2)gc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    a7b4   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACED80750 UDP Snd 192.168.6.81    a7b4 R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             4446   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             4446 R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.81    dfae   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.81    dfae R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv ::1             53e2   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Snd ::1             53e2 R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    f976   U [0028       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    f976 R U [00a8       NOERROR] SOA    (6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             ec36   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             ec36 R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    474c   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    474c R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv ::1             4c5b   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd ::1             4c5b R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv 192.168.6.81    fe1c   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACAB63A40 UDP Snd 192.168.6.81    fe1c R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             1b50   Q [0001   D   NOERROR] SOA    (3)_gc(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             1b50 R Q [8085 A DR  NOERROR] SOA    (3)_gc(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    0502   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    0502 R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             19fd   Q [0001   D   NOERROR] SOA    (3)_gc(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             19fd R Q [8085 A DR  NOERROR] SOA    (3)_gc(4)_tcp(23)Default-First-Site-Name(6)_sites(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.81    92fd   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACB4762C0 UDP Snd 192.168.6.81    92fd R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv ::1             335a   Q [0001   D   NOERROR] SOA    (9)_kerberos(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Snd ::1             335a R Q [8085 A DR  NOERROR] SOA    (9)_kerberos(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    18fb   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    18fb R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             45ee   Q [0001   D   NOERROR] SOA    (8)_kpasswd(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             45ee R Q [8085 A DR  NOERROR] SOA    (8)_kpasswd(4)_tcp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    8538   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009AC987D020 UDP Snd 192.168.6.81    8538 R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv ::1             259c   Q [0001   D   NOERROR] SOA    (8)_kpasswd(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd ::1             259c R Q [8085 A DR  NOERROR] SOA    (8)_kpasswd(4)_udp(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv 192.168.6.81    5d9f   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009ACAB63A40 UDP Snd 192.168.6.81    5d9f R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             e33c   Q [0001   D   NOERROR] SOA    (14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             e33c R Q [8085 A DR  NOERROR] SOA    (14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    9af4   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACED80750 UDP Snd 192.168.6.81    9af4 R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv ::1             4a7c   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Snd ::1             4a7c R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.81    11fb   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.81    11fb R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv ::1             0b27   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Snd ::1             0b27 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)DomainDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.81    7717   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009AC9885E00 UDP Snd 192.168.6.81    7717 R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv ::1             eb7a   Q [0001   D   NOERROR] SOA    (14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Snd ::1             eb7a R Q [8085 A DR  NOERROR] SOA    (14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC987D020 UDP Rcv 192.168.6.81    593a   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009AC987D020 UDP Snd 192.168.6.81    593a R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv ::1             bdc4   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd ::1             bdc4 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACAB63A40 UDP Rcv 192.168.6.81    44dd   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0DFC PACKET  0000009ACAB63A40 UDP Snd 192.168.6.81    44dd R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv ::1             e629   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009AC9885E00 UDP Snd ::1             e629 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(14)ForestDnsZones(4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.81    d232   U [0028       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:01 AM 0E00 PACKET  0000009ACED80750 UDP Snd 192.168.6.81    d232 R U [00a8       NOERROR] SOA    (4)file(5)local(0)
+
+6/20/2017 5:42:55 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.92    1596   Q [0001   D   NOERROR] A      (4)dc01(4)file(5)local(0)
+
+6/20/2017 5:42:55 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.92    1596 R Q [8085 A DR  NOERROR] A      (4)dc01(4)file(5)local(0)
+
+6/20/2017 5:44:24 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.95    7050   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:44:24 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.95    7050 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:15 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.93    75fb   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:15 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.93    75fb R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.93    dbb0   Q [0001   D   NOERROR] A      (6)FILE05(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.93    dbb0 R Q [8085 A DR  NOERROR] A      (6)FILE05(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.95    e5ce   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.95    e5ce R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.95    e5d8   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.95    e5d8 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.95    9dee   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.95    9dee R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.95    8450   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.95    8450 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.95    4f70   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.95    4f70 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.93    9735   Q [0001   D   NOERROR] A      (4)FILE(4)file(5)local(0)
+
+6/20/2017 5:46:16 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.93    9735 R Q [8385 A DR NXDOMAIN] A      (4)FILE(4)file(5)local(0)
+
+6/20/2017 5:46:19 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.93    5680   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:19 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.93    5680 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:21 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.95    6b2e   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:21 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.95    6b2e R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:21 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.95    617a   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:21 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.95    617a R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:21 AM 0E24 PACKET  0000009AC9885E00 UDP Rcv 192.168.6.95    96c7   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:21 AM 0E24 PACKET  0000009AC9885E00 UDP Snd 192.168.6.95    96c7 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:22 AM 0E24 PACKET  0000009ACED80750 UDP Rcv 192.168.6.95    4a1e   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:22 AM 0E24 PACKET  0000009ACED80750 UDP Snd 192.168.6.95    4a1e R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:22 AM 0E24 PACKET  0000009ACB4762C0 UDP Rcv 192.168.6.95    1902   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+
+6/20/2017 5:46:22 AM 0E24 PACKET  0000009ACB4762C0 UDP Snd 192.168.6.95    1902 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(3)pdc(6)_msdcs(4)file(5)local(0)
+

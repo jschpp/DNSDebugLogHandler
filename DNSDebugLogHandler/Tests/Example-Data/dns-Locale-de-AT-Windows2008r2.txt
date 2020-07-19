@@ -1,0 +1,1 @@
+30/09/2015 12:04:28 0DAC PACKET  00000000027404B0 UDP Rcv 192.168.255.255  ed3d   Q [0001   D   NOERROR] A      (6)teredo(4)ipv6(9)microsoft(3)com(0)

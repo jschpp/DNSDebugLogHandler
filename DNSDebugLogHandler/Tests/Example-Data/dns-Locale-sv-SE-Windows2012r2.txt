@@ -1,0 +1,589 @@
+DNS Server log file creation at 2017-05-21 19:44:53
+
+Message logging key (for packets - other items use a subset of these fields):
+	Field #  Information         Values
+	-------  -----------         ------
+	   1     Date
+	   2     Time
+	   3     Thread ID
+	   4     Context
+	   5     Internal packet identifier
+	   6     UDP/TCP indicator
+	   7     Send/Receive indicator
+	   8     Remote IP
+	   9     Xid (hex)
+	  10     Query/Response      R = Response
+	                             blank = Query
+	  11     Opcode              Q = Standard Query
+	                             N = Notify
+	                             U = Update
+	                             ? = Unknown
+	  12     [ Flags (hex)
+	  13     Flags (char codes)  A = Authoritative Answer
+	                             T = Truncated Response
+	                             D = Recursion Desired
+	                             R = Recursion Available
+	  14     ResponseCode ]
+	  15     Question Type
+	  16     Question Name
+
+2017-05-21 19:44:58 0518 EVENT   The DNS server is waiting for Active Directory Domain Services (AD DS) to signal that the initial synchronization of the directory has been completed. The DNS server service cannot start until the initial synchronization is complete because critical DNS data might not yet be replicated onto this domain controller. If events in the AD DS event log indicate that there is a problem with DNS name resolution, consider adding the IP address of another DNS server for this domain to the DNS server list in the Internet Protocol properties of this computer. This event will be logged every two minutes until AD DS has signaled that the initial synchronization has successfully completed.
+2017-05-21 19:45:35 0518 EVENT   The DNS server has started.
+2017-05-21 19:45:35 5C8 Note: got GQCS failure on a dead socket context status=995, socket=500, pcon=00000020F4B18390, state=-1, IP=0.0.0.0
+2017-05-21 19:45:35 5C8 Note: got GQCS failure on a dead socket context status=995, socket=500, pcon=00000020F4B18390, state=-1, IP=0.0.0.0
+2017-05-21 19:45:35 5C8 Note: got GQCS failure on a dead socket context status=995, socket=612, pcon=00000020F4B18490, state=-1, IP=::
+2017-05-21 19:45:35 5C8 Note: got GQCS failure on a dead socket context status=995, socket=612, pcon=00000020F4B18490, state=-1, IP=::
+2017-05-21 19:45:36 05AC EVENT   The DNS server has finished the background loading and signing of zones. All zones are now available for DNS updates and zone transfers, as allowed by their individual zone configuration.
+2017-05-21 19:46:11 05C0 PACKET  00000020F4B1BE70 UDP Rcv ::1             ee11   Q [0001   D   NOERROR] A      (6)isatap(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:11 05C0 PACKET  00000020F4B1BE70 UDP Snd ::1             ee11 R Q [8385 A DR NXDOMAIN] A      (6)isatap(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:11 05C0 PACKET  00000020F5100090 UDP Rcv ::1             95c3   Q [0001   D   NOERROR] A      (6)isatap(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:11 05C0 PACKET  00000020F5100090 UDP Snd ::1             95c3 R Q [8385 A DR NXDOMAIN] A      (6)isatap(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:11 05C0 PACKET  00000020F5107250 UDP Rcv ::1             20ab   Q [0001   D   NOERROR] A      (6)isatap(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:11 05C0 PACKET  00000020F5107250 UDP Snd ::1             20ab R Q [8385 A DR NXDOMAIN] A      (6)isatap(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:11 05C0 PACKET  00000020F4B1BE70 UDP Rcv ::1             8b6e   Q [0001   D   NOERROR] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:11 05C0 PACKET  00000020F4B1BE70 UDP Snd ::1             8b6e R Q [8385 A DR NXDOMAIN] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 5C0 Note: got GQCS failure on a dead socket context status=995, socket=500, pcon=00000020F4B1DAE0, state=-1, IP=0.0.0.0
+2017-05-21 19:46:12 5C0 Note: got GQCS failure on a dead socket context status=995, socket=628, pcon=00000020F4B1DBE0, state=-1, IP=::
+2017-05-21 19:46:12 5C0 Note: got GQCS failure on a dead socket context status=995, socket=628, pcon=00000020F4B1DBE0, state=-1, IP=::
+2017-05-21 19:46:12 5C8 Note: got GQCS failure on a dead socket context status=995, socket=500, pcon=00000020F4B1DAE0, state=-1, IP=0.0.0.0
+2017-05-21 19:46:12 05C8 PACKET  00000020F5100090 UDP Rcv ::1             ae1a   Q [0001   D   NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F514DCD0 UDP Snd 128.8.10.90     a062   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F5107250 UDP Rcv ::1             3997   Q [0001   D   NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F5159CC0 UDP Snd 193.0.14.129    0409   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F514C060 UDP Rcv ::1             a7c9   Q [0001   D   NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F514C060 UDP Snd ::1             a7c9 R Q [8085 A DR  NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F51545E0 UDP Rcv ::1             f5d3   Q [0001   D   NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F51545E0 UDP Snd ::1             f5d3 R Q [8085 A DR  NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 5C8 Note: got GQCS failure on a dead socket context status=995, socket=1240, pcon=00000020F512CF10, state=-1, IP=0.0.0.0
+2017-05-21 19:46:12 05C8 PACKET  00000020F515B9D0 UDP Rcv ::1             8fcc   Q [0001   D   NOERROR] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F515B9D0 UDP Snd ::1             8fcc R Q [8385 A DR NXDOMAIN] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F514C060 UDP Rcv ::1             9771   Q [0001   D   NOERROR] AAAA   (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F514C060 UDP Snd ::1             9771 R Q [8385 A DR NXDOMAIN] AAAA   (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 5C8 Note: got GQCS failure on a dead socket context status=995, socket=1248, pcon=00000020F512C910, state=-1, IP=::
+2017-05-21 19:46:12 5C8 Note: got GQCS failure on a dead socket context status=995, socket=1248, pcon=00000020F512C910, state=-1, IP=::
+2017-05-21 19:46:12 05C8 PACKET  00000020F5101D00 UDP Rcv ::1             28c6   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C8 PACKET  00000020F5101D00 UDP Snd ::1             28c6 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 5C0 Note: got GQCS failure on a dead socket context status=995, socket=1240, pcon=00000020F512CF10, state=-1, IP=0.0.0.0
+2017-05-21 19:46:12 05C0 PACKET  00000020F4B1BE70 UDP Rcv 192.168.66.21   f1af   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0538 PACKET  00000020F4B1BE70 UDP Snd 192.168.66.21   f1af R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F515B9D0 UDP Rcv ::1             621f   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F515B9D0 UDP Snd ::1             621f R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F51055E0 UDP Rcv 192.168.66.21   dff4   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0530 PACKET  00000020F51055E0 UDP Snd 192.168.66.21   dff4 R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F514A3F0 UDP Rcv ::1             53b5   Q [0001   D   NOERROR] SOA    (2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F514A3F0 UDP Snd ::1             53b5 R Q [8085 A DR  NOERROR] SOA    (2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F5101D00 UDP Rcv 192.168.66.21   161d   U [0028       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0534 PACKET  00000020F5101D00 UDP Snd 192.168.66.21   161d R U [00a8       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F4B1BE70 UDP Rcv ::1             77d7   Q [0001   D   NOERROR] SOA    (2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F4B1BE70 UDP Snd ::1             77d7 R Q [8085 A DR  NOERROR] SOA    (2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F515B9D0 UDP Rcv 192.168.66.21   c02b   U [0028       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0538 PACKET  00000020F515B9D0 UDP Snd 192.168.66.21   c02b R U [00a8       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F5148780 UDP Rcv ::1             3fc5   Q [0001   D   NOERROR] SOA    (14)DomainDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F5148780 UDP Snd ::1             3fc5 R Q [8085 A DR  NOERROR] SOA    (14)DomainDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F51055E0 UDP Rcv 192.168.66.21   c467   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0530 PACKET  00000020F51055E0 UDP Snd 192.168.66.21   c467 R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F514A3F0 UDP Rcv ::1             54e3   Q [0001   D   NOERROR] SOA    (14)DomainDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F514A3F0 UDP Snd ::1             54e3 R Q [8085 A DR  NOERROR] SOA    (14)DomainDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F5101D00 UDP Rcv 192.168.66.21   80bb   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0534 PACKET  00000020F5101D00 UDP Snd 192.168.66.21   80bb R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F515B9D0 UDP Rcv ::1             07ae   Q [0001   D   NOERROR] SOA    (14)ForestDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F515B9D0 UDP Snd ::1             07ae R Q [8085 A DR  NOERROR] SOA    (14)ForestDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F5148780 UDP Rcv 192.168.66.21   1bee   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0538 PACKET  00000020F5148780 UDP Snd 192.168.66.21   1bee R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F4B1BE70 UDP Rcv ::1             bba5   Q [0001   D   NOERROR] SOA    (14)ForestDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F4B1BE70 UDP Snd ::1             bba5 R Q [8085 A DR  NOERROR] SOA    (14)ForestDnsZones(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 05C0 PACKET  00000020F51055E0 UDP Rcv 192.168.66.21   e6e5   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:12 0530 PACKET  00000020F51055E0 UDP Snd 192.168.66.21   e6e5 R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:16 05C0 PACKET  00000020F514A3F0 UDP Rcv ::1             3997   Q [0001   D   NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:16 05C8 PACKET  00000020F5148780 UDP Rcv ::1             ae1a   Q [0001   D   NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:16 05C0 PACKET  00000020F4B1A200 UDP Rcv 127.0.0.1       3997   Q [0001   D   NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:16 05C8 PACKET  00000020F4B18590 UDP Rcv 127.0.0.1       ae1a   Q [0001   D   NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:16 052C PACKET  00000020F514DCD0 UDP Snd 192.228.79.201  a062   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:16 052C PACKET  00000020F5159CC0 UDP Snd 192.228.79.201  0409   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:17 05C8 PACKET  00000020F51055E0 UDP Rcv ::1             bfb8   Q [0001   D   NOERROR] SRV    (6)_VLMCS(4)_TCP(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:17 05C8 PACKET  00000020F51055E0 UDP Snd ::1             bfb8 R Q [8385 A DR NXDOMAIN] SRV    (6)_VLMCS(4)_TCP(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 05C8 PACKET  00000020F515B9D0 UDP Rcv ::1             49f0   Q [0001   D   NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 05C8 PACKET  00000020F515B9D0 UDP Snd ::1             49f0 R Q [8085 A DR  NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 05C8 PACKET  00000020F5101D00 UDP Rcv 192.168.66.21   2e30   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 0534 PACKET  00000020F5101D00 UDP Snd 192.168.66.21   2e30 R U [05a8       REFUSED] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 05C0 PACKET  00000020F5148780 UDP Rcv 127.0.0.1       ae1a   Q [0001   D   NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 05C0 PACKET  00000020F5162E10 UDP Snd 199.7.83.42     98d9   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 05C0 PACKET  00000020F51055E0 UDP Rcv ::1             3997   Q [0001   D   NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 05C0 PACKET  00000020F517A510 UDP Snd 192.33.4.12     02f6   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 05C0 PACKET  00000020F5103970 UDP Rcv 127.0.0.1       3997   Q [0001   D   NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 05C8 PACKET  00000020F515F3F0 UDP Rcv ::1             ae1a   Q [0001   D   NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 0518 PACKET  00000020F51A8AB0 TCP Rcv 192.168.66.21   0913   Q [0000       NOERROR] TKEY   (8)952-ms-7(7)1-21b2f(36)654f75a4-3e4d-11e7-c880-c03fd56561d2(0)
+
+2017-05-21 19:46:20 0538 PACKET  00000020F51A8AB0 TCP Snd 192.168.66.21   0913 R Q [0080       NOERROR] TKEY   (8)952-ms-7(7)1-21b2f(36)654f75a4-3e4d-11e7-c880-c03fd56561d2(0)
+
+2017-05-21 19:46:20 05C8 PACKET  00000020F4B1BE70 UDP Rcv 192.168.66.21   033d   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 0530 PACKET  00000020F4B1BE70 UDP Snd 192.168.66.21   033d R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 05C8 PACKET  00000020F5161100 UDP Rcv ::1             0da0   Q [0001   D   NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 05C8 PACKET  00000020F5161100 UDP Snd ::1             0da0 R Q [8085 A DR  NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:46:20 052C PACKET  00000020F514DCD0 UDP Snd 192.33.4.12     a062   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 052C PACKET  00000020F514DCD0 UDP Snd 192.203.230.10  a062   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 052C PACKET  00000020F5159CC0 UDP Snd 192.33.4.12     0409   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:20 052C PACKET  00000020F5159CC0 UDP Snd 192.203.230.10  0409   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:24 05C8 PACKET  00000020F517C220 UDP Rcv ::1             9d9b   Q [0001   D   NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:24 05C0 PACKET  00000020F4B1BE70 UDP Rcv ::1             7d4e   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:24 05C8 PACKET  00000020F518AAA0 UDP Snd 199.7.83.42     41b1   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:24 05C0 PACKET  00000020F5185370 UDP Snd 199.7.83.42     0652   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:24 052C PACKET  00000020F5162E10 UDP Snd 192.228.79.201  98d9   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:24 052C PACKET  00000020F517A510 UDP Snd 192.203.230.10  02f6   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:24 052C PACKET  00000020F5100090 UDP Snd 127.0.0.1       ae1a R Q [8281   DR SERVFAIL] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:24 052C PACKET  00000020F5100090 UDP Snd ::1             ae1a R Q [8281   DR SERVFAIL] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:24 052C PACKET  00000020F5107250 UDP Snd 127.0.0.1       3997 R Q [8281   DR SERVFAIL] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:24 052C PACKET  00000020F5107250 UDP Snd ::1             3997 R Q [8281   DR SERVFAIL] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:27 052C PACKET  00000020F518AAA0 UDP Snd 192.203.230.10  41b1   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:27 052C PACKET  00000020F5185370 UDP Snd 192.5.5.241     0652   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:28 05C0 PACKET  00000020F5161100 UDP Rcv ::1             7d4e   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:28 05C8 PACKET  00000020F5188D90 UDP Rcv ::1             9d9b   Q [0001   D   NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:28 05C8 PACKET  00000020F5101D00 UDP Rcv 127.0.0.1       7d4e   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:28 05C0 PACKET  00000020F517DF30 UDP Rcv 127.0.0.1       9d9b   Q [0001   D   NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:28 052C PACKET  00000020F5162E10 UDP Snd 192.33.4.12     98d9   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:28 052C PACKET  00000020F5162E10 UDP Snd 192.203.230.10  98d9   Q [0000       NOERROR] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:28 052C PACKET  00000020F517A510 UDP Snd 192.5.5.241     02f6   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:28 052C PACKET  00000020F517A510 UDP Snd 192.112.36.4    02f6   Q [0000       NOERROR] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:31 052C PACKET  00000020F518AAA0 UDP Snd 192.5.5.241     41b1   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:31 052C PACKET  00000020F518AAA0 UDP Snd 192.112.36.4    41b1   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:31 052C PACKET  00000020F5185370 UDP Snd 192.112.36.4    0652   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:31 052C PACKET  00000020F5185370 UDP Snd 192.36.148.17   0652   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:32 052C PACKET  00000020F5148780 UDP Snd ::1             ae1a R Q [8281   DR SERVFAIL] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:32 052C PACKET  00000020F5148780 UDP Snd 127.0.0.1       ae1a R Q [8281   DR SERVFAIL] A      (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:32 052C PACKET  00000020F51055E0 UDP Snd 127.0.0.1       3997 R Q [8281   DR SERVFAIL] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:32 052C PACKET  00000020F51055E0 UDP Snd ::1             3997 R Q [8281   DR SERVFAIL] AAAA   (2)se(4)pool(3)ntp(3)org(0)
+
+2017-05-21 19:46:32 05C0 PACKET  00000020F5183660 UDP Rcv ::1             9d9b   Q [0001   D   NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:32 05C0 PACKET  00000020F517A510 UDP Snd 192.36.148.17   5328   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:32 05C0 PACKET  00000020F5188D90 UDP Rcv 127.0.0.1       9d9b   Q [0001   D   NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:32 05C0 PACKET  00000020F5159CC0 UDP Rcv ::1             7d4e   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:32 05C0 PACKET  00000020F5162E10 UDP Snd 202.12.27.33    c86c   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:32 05C0 PACKET  00000020F5161100 UDP Rcv 127.0.0.1       7d4e   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:35 052C PACKET  00000020F517C220 UDP Snd 127.0.0.1       9d9b R Q [8281   DR SERVFAIL] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:35 052C PACKET  00000020F517C220 UDP Snd ::1             9d9b R Q [8281   DR SERVFAIL] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:35 052C PACKET  00000020F4B1BE70 UDP Snd 127.0.0.1       7d4e R Q [8281   DR SERVFAIL] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:35 052C PACKET  00000020F4B1BE70 UDP Snd ::1             7d4e R Q [8281   DR SERVFAIL] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:36 052C PACKET  00000020F517A510 UDP Snd 192.58.128.30   5328   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:36 052C PACKET  00000020F5162E10 UDP Snd 192.58.128.30   c86c   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:40 052C PACKET  00000020F517A510 UDP Snd 198.41.0.4      5328   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:40 052C PACKET  00000020F517A510 UDP Snd 128.63.2.53     5328   Q [0000       NOERROR] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:40 052C PACKET  00000020F5162E10 UDP Snd 198.41.0.4      c86c   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:40 052C PACKET  00000020F5162E10 UDP Snd 128.63.2.53     c86c   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:44 052C PACKET  00000020F5183660 UDP Snd 127.0.0.1       9d9b R Q [8281   DR SERVFAIL] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:44 052C PACKET  00000020F5183660 UDP Snd ::1             9d9b R Q [8281   DR SERVFAIL] AAAA   (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:44 052C PACKET  00000020F5159CC0 UDP Snd 127.0.0.1       7d4e R Q [8281   DR SERVFAIL] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:46:44 052C PACKET  00000020F5159CC0 UDP Snd ::1             7d4e R Q [8281   DR SERVFAIL] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F515B9D0 UDP Rcv 192.168.66.21   6201   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F515B9D0 UDP Snd 192.168.66.21   6201 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F5181950 UDP Rcv 192.168.66.21   76d0   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 0534 PACKET  00000020F5181950 UDP Snd 192.168.66.21   76d0 R U [05a8       REFUSED] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 0518 PACKET  00000020F519A4D0 TCP Rcv 192.168.66.21   697d   Q [0000       NOERROR] TKEY   (9)1288-ms-7(7)1-2b8d6(36)7d5f61d8-3e4d-11e7-c880-c03fd56561d2(0)
+
+2017-05-21 19:47:00 0538 PACKET  00000020F519A4D0 TCP Snd 192.168.66.21   697d R Q [0080       NOERROR] TKEY   (9)1288-ms-7(7)1-2b8d6(36)7d5f61d8-3e4d-11e7-c880-c03fd56561d2(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F5159CC0 UDP Rcv 192.168.66.21   3abb   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 0530 PACKET  00000020F5159CC0 UDP Snd 192.168.66.21   3abb R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F510E410 UDP Rcv 2001:16d8:ff00:856f::66:21 ee26   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F510E410 UDP Snd 2001:16d8:ff00:856f::66:21 ee26 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F51055E0 UDP Rcv ::1             87c0   Q [0001   D   NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C0 PACKET  00000020F51055E0 UDP Snd ::1             87c0 R Q [8085 A DR  NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C8 PACKET  00000020F5148780 UDP Rcv ::1             5f14   Q [0001   D   NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C8 PACKET  00000020F5148780 UDP Snd ::1             5f14 R Q [8085 A DR  NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C8 PACKET  00000020F515B9D0 UDP Rcv 192.168.66.21   dd28   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C8 PACKET  00000020F515B9D0 UDP Snd 192.168.66.21   dd28 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C8 PACKET  00000020F5181950 UDP Rcv 192.168.66.21   b5b1   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 0534 PACKET  00000020F5181950 UDP Snd 192.168.66.21   b5b1 R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C8 PACKET  00000020F510C7A0 UDP Rcv 2001:16d8:ff00:856f::66:21 191e   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:00 05C8 PACKET  00000020F510C7A0 UDP Snd 2001:16d8:ff00:856f::66:21 191e R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:08 05C8 PACKET  00000020F510E410 UDP Rcv ::1             e3b3   Q [0001   D   NOERROR] SOA    (1)1(1)2(1)0(1)0(1)6(1)6(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)f(1)6(1)5(1)8(1)0(1)0(1)f(1)f(1)8(1)d(1)6(1)1(1)1(1)0(1)0(1)2(3)ip6(4)arpa(0)
+
+2017-05-21 19:47:08 05C8 PACKET  00000020F510E410 UDP Snd ::1             e3b3 R Q [8085 A DR  NOERROR] SOA    (1)1(1)2(1)0(1)0(1)6(1)6(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)0(1)f(1)6(1)5(1)8(1)0(1)0(1)f(1)f(1)8(1)d(1)6(1)1(1)1(1)0(1)0(1)2(3)ip6(4)arpa(0)
+
+2017-05-21 19:47:08 05C8 PACKET  00000020F5148780 UDP Rcv 192.168.66.21   9c77   U [0028       NOERROR] SOA    (1)f(1)6(1)5(1)8(1)0(1)0(1)f(1)f(1)8(1)d(1)6(1)1(1)1(1)0(1)0(1)2(3)ip6(4)arpa(0)
+
+2017-05-21 19:47:08 0538 PACKET  00000020F5148780 UDP Snd 192.168.66.21   9c77 R U [00a8       NOERROR] SOA    (1)f(1)6(1)5(1)8(1)0(1)0(1)f(1)f(1)8(1)d(1)6(1)1(1)1(1)0(1)0(1)2(3)ip6(4)arpa(0)
+
+2017-05-21 19:47:08 05C8 PACKET  00000020F51055E0 UDP Rcv ::1             1ae9   Q [0001   D   NOERROR] SOA    (2)21(2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:47:08 05C8 PACKET  00000020F51055E0 UDP Snd ::1             1ae9 R Q [8085 A DR  NOERROR] SOA    (2)21(2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:47:08 05C8 PACKET  00000020F515B9D0 UDP Rcv 192.168.66.21   c9c4   U [0028       NOERROR] SOA    (2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:47:08 0530 PACKET  00000020F515B9D0 UDP Snd 192.168.66.21   c9c4 R U [00a8       NOERROR] SOA    (2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:47:48 05C8 PACKET  00000020F510C7A0 UDP Rcv ::1             9fc6   Q [0001   D   NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:48 05C8 PACKET  00000020F510C7A0 UDP Snd ::1             9fc6 R Q [8085 A DR  NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:48 05C8 PACKET  00000020F5148780 UDP Rcv ::1             3563   Q [0001   D   NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:47:48 05C8 PACKET  00000020F5148780 UDP Snd ::1             3563 R Q [8085 A DR  NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:17 05C8 PACKET  00000020F510E410 UDP Rcv 192.168.66.11   811d   Q [0001   D   NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:17 05C8 PACKET  00000020F5162E10 UDP Snd 198.41.0.4      38be   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:18 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.11   811d   Q [0001   D   NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:18 05C0 PACKET  00000020F5148780 UDP Rcv 192.168.66.11   f059   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:18 05C0 PACKET  00000020F5107250 UDP Snd 198.41.0.4      04c6   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:20 05C0 PACKET  00000020F5161100 UDP Rcv 192.168.66.11   cb68   Q [0001   D   NOERROR] SOA    (8)server01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:20 05C0 PACKET  00000020F5161100 UDP Snd 192.168.66.11   cb68 R Q [8085 A DR  NOERROR] SOA    (8)server01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:20 05C0 PACKET  00000020F51055E0 UDP Rcv 192.168.66.11   2f81   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:20 0534 PACKET  00000020F51055E0 UDP Snd 192.168.66.11   2f81 R U [05a8       REFUSED] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:20 052C PACKET  00000020F5162E10 UDP Snd 202.12.27.33    38be   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:22 05C0 PACKET  00000020F5183660 UDP Rcv 192.168.66.11   811d   Q [0001   D   NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:22 05C8 PACKET  00000020F5161100 UDP Rcv 192.168.66.11   f059   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:22 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.11   e71d   Q [0001   D   NOERROR] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:22 05C8 PACKET  00000020F51055E0 UDP Snd 192.168.66.11   e71d R Q [8385 A DR NXDOMAIN] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:22 052C PACKET  00000020F5107250 UDP Snd 202.12.27.33    04c6   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:24 05C8 PACKET  00000020F517A510 UDP Rcv 192.168.66.11   8a03   Q [0001   D   NOERROR] SRV    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:24 05C8 PACKET  00000020F517A510 UDP Snd 192.168.66.11   8a03 R Q [8085 A DR  NOERROR] SRV    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:24 05C8 PACKET  00000020F5161100 UDP Rcv 192.168.66.11   62ac   Q [0001   D   NOERROR] A      (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:24 05C8 PACKET  00000020F5161100 UDP Snd 192.168.66.11   62ac R Q [8085 A DR  NOERROR] A      (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:24 052C PACKET  00000020F5162E10 UDP Snd 199.7.83.42     38be   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:24 052C PACKET  00000020F5162E10 UDP Snd 198.41.0.4      38be   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:26 052C PACKET  00000020F5107250 UDP Snd 199.7.83.42     04c6   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:26 052C PACKET  00000020F5107250 UDP Snd 198.41.0.4      04c6   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:28 052C PACKET  00000020F510E410 UDP Snd 192.168.66.11   811d R Q [8281   DR SERVFAIL] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:30 052C PACKET  00000020F5148780 UDP Snd 192.168.66.11   f059 R Q [8281   DR SERVFAIL] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.21   5d03   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F51055E0 UDP Snd 192.168.66.21   5d03 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F517A510 UDP Rcv 192.168.66.21   5436   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 0538 PACKET  00000020F517A510 UDP Snd 192.168.66.21   5436 R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F5159CC0 UDP Rcv 2001:16d8:ff00:856f::66:21 11d9   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F5159CC0 UDP Snd 2001:16d8:ff00:856f::66:21 11d9 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F515B9D0 UDP Rcv ::1             7e7e   Q [0001   D   NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F515B9D0 UDP Snd ::1             7e7e R Q [8085 A DR  NOERROR] SOA    (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F510C7A0 UDP Rcv ::1             0f68   Q [0001   D   NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:48:37 05C8 PACKET  00000020F510C7A0 UDP Snd ::1             0f68 R Q [8085 A DR  NOERROR] NS     (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F5148780 UDP Rcv 192.168.66.14   62fb   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F5148780 UDP Snd 192.168.66.14   62fb R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.14   f46f   Q [0001   D   NOERROR] A      (4)dc02(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F51055E0 UDP Snd 192.168.66.14   f46f R Q [8085 A DR  NOERROR] A      (4)dc02(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F510C7A0 UDP Rcv 192.168.66.14   51c3   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F510C7A0 UDP Snd 192.168.66.14   51c3 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F5148780 UDP Rcv 192.168.66.14   b334   Q [0001   D   NOERROR] A      (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F5148780 UDP Snd 192.168.66.14   b334 R Q [8085 A DR  NOERROR] A      (4)dc01(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.14   7cf8   Q [0001   D   NOERROR] SOA    (2)14(2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F51055E0 UDP Snd 192.168.66.14   7cf8 R Q [8085 A DR  NOERROR] SOA    (2)14(2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F510C7A0 UDP Rcv 192.168.66.14   d664   U [0028       NOERROR] SOA    (2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:49:24 0530 PACKET  00000020F510C7A0 UDP Snd 192.168.66.14   d664 R U [05a8       REFUSED] SOA    (2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F5148780 UDP Rcv 192.168.66.14   4109   Q [0001   D   NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F5107250 UDP Snd 192.228.79.201  ec30   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:24 0518 PACKET  00000020F519A4D0 TCP Rcv 192.168.66.14   1a8b   Q [0000       NOERROR] TKEY   (9)1512-ms-7(6)1-a17f(36)3d4238d3-3e4e-11e7-2384-984be10af044(0)
+
+2017-05-21 19:49:24 0534 PACKET  00000020F519A4D0 TCP Snd 192.168.66.14   1a8b R Q [0080       NOERROR] TKEY   (9)1512-ms-7(6)1-a17f(36)3d4238d3-3e4e-11e7-2384-984be10af044(0)
+
+2017-05-21 19:49:24 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.14   3155   U [0028       NOERROR] SOA    (2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:49:24 0538 PACKET  00000020F51055E0 UDP Snd 192.168.66.14   3155 R U [00a8       NOERROR] SOA    (2)66(3)168(3)192(7)in-addr(4)arpa(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F510C7A0 UDP Rcv 192.168.66.14   f73c   Q [0001   D   NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F5162E10 UDP Snd 202.12.27.33    2006   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F510E410 UDP Rcv 192.168.66.14   e4e6   Q [0001   D   NOERROR] SRV    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F510E410 UDP Snd 192.168.66.14   e4e6 R Q [8085 A DR  NOERROR] SRV    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.14   c9b5   Q [0001   D   NOERROR] A      (4)dc02(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F51055E0 UDP Snd 192.168.66.14   c9b5 R Q [8085 A DR  NOERROR] A      (4)dc02(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F5161100 UDP Rcv 192.168.66.14   cd38   Q [0001   D   NOERROR] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:25 05C8 PACKET  00000020F5161100 UDP Snd 192.168.66.14   cd38 R Q [8385 A DR NXDOMAIN] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:26 05C8 PACKET  00000020F510E410 UDP Rcv 192.168.66.21   5a80   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:26 05C8 PACKET  00000020F510E410 UDP Snd 192.168.66.21   5a80 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:26 05C8 PACKET  00000020F51055E0 UDP Rcv 192.168.66.21   be50   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:26 0530 PACKET  00000020F51055E0 UDP Snd 192.168.66.21   be50 R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:26 05C8 PACKET  00000020F5181950 UDP Rcv 2001:16d8:ff00:856f::66:21 5083   Q [0001   D   NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:26 05C8 PACKET  00000020F5181950 UDP Snd 2001:16d8:ff00:856f::66:21 5083 R Q [8085 A DR  NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:27 05C8 PACKET  00000020F5161100 UDP Rcv 192.168.66.14   12f1   Q [0001   D   NOERROR] SRV    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:27 05C8 PACKET  00000020F5161100 UDP Snd 192.168.66.14   12f1 R Q [8085 A DR  NOERROR] SRV    (9)_kerberos(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:28 052C PACKET  00000020F5107250 UDP Snd 198.41.0.4      ec30   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:28 052C PACKET  00000020F5162E10 UDP Snd 198.41.0.4      2006   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:28 05C8 PACKET  00000020F5159CC0 UDP Rcv ::1             4120   Q [0001   D   NOERROR] A      (36)09fd74fb-0299-4e37-9010-acd8c4c891d9(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:28 05C8 PACKET  00000020F5159CC0 UDP Snd ::1             4120 R Q [8085 A DR  NOERROR] A      (36)09fd74fb-0299-4e37-9010-acd8c4c891d9(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:28 05C8 PACKET  00000020F515B9D0 UDP Rcv ::1             efd0   Q [0001   D   NOERROR] AAAA   (36)09fd74fb-0299-4e37-9010-acd8c4c891d9(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:28 05C8 PACKET  00000020F515B9D0 UDP Snd ::1             efd0 R Q [8085 A DR  NOERROR] AAAA   (36)09fd74fb-0299-4e37-9010-acd8c4c891d9(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:28 05C8 PACKET  00000020F510E410 UDP Rcv 192.168.66.11   2b6d   Q [0001   D   NOERROR] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:28 05C8 PACKET  00000020F510E410 UDP Snd 192.168.66.11   2b6d R Q [8385 A DR NXDOMAIN] A      (4)wpad(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:32 05C8 PACKET  00000020F5181950 UDP Rcv 192.168.66.11   7149   Q [0001   D   NOERROR] SRV    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:32 05C8 PACKET  00000020F5181950 UDP Snd 192.168.66.11   7149 R Q [8085 A DR  NOERROR] SRV    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)dc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:49:32 052C PACKET  00000020F5107250 UDP Snd 199.7.83.42     ec30   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:32 052C PACKET  00000020F5107250 UDP Snd 193.0.14.129    ec30   Q [0000       NOERROR] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:32 052C PACKET  00000020F5162E10 UDP Snd 199.7.83.42     2006   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:32 052C PACKET  00000020F5162E10 UDP Snd 193.0.14.129    2006   Q [0000       NOERROR] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:36 052C PACKET  00000020F5148780 UDP Snd 192.168.66.14   4109 R Q [8281   DR SERVFAIL] SRV    (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:49:36 052C PACKET  00000020F510C7A0 UDP Snd 192.168.66.14   f73c R Q [8281   DR SERVFAIL] A      (3)dns(8)msftncsi(3)com(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5161100 UDP Rcv ::1             89b5   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5161100 UDP Snd ::1             89b5 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F515B9D0 UDP Rcv 192.168.66.21   4d89   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 0534 PACKET  00000020F515B9D0 UDP Snd 192.168.66.21   4d89 R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5159CC0 UDP Rcv ::1             048d   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5159CC0 UDP Snd ::1             048d R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510E410 UDP Rcv 192.168.66.21   d07f   U [0028       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 0538 PACKET  00000020F510E410 UDP Snd 192.168.66.21   d07f R U [00a8       NOERROR] SOA    (2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510C7A0 UDP Rcv ::1             0323   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510C7A0 UDP Snd ::1             0323 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5161100 UDP Rcv 192.168.66.21   f5ed   U [0028       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 0530 PACKET  00000020F5161100 UDP Snd 192.168.66.21   f5ed R U [00a8       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F515B9D0 UDP Rcv ::1             b072   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F515B9D0 UDP Snd ::1             b072 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(23)Default-First-Site-Name(6)_sites(2)gc(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5159CC0 UDP Rcv 192.168.66.21   da45   U [0028       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 0534 PACKET  00000020F5159CC0 UDP Snd 192.168.66.21   da45 R U [00a8       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510E410 UDP Rcv ::1             ae29   Q [0001   D   NOERROR] SOA    (5)_ldap(4)_tcp(36)b0b1fda0-7185-46ea-b564-726e86fd6d6d(7)domains(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510E410 UDP Snd ::1             ae29 R Q [8085 A DR  NOERROR] SOA    (5)_ldap(4)_tcp(36)b0b1fda0-7185-46ea-b564-726e86fd6d6d(7)domains(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510C7A0 UDP Rcv 192.168.66.21   5fdf   U [0028       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 0538 PACKET  00000020F510C7A0 UDP Snd 192.168.66.21   5fdf R U [00a8       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5161100 UDP Rcv ::1             05eb   Q [0001   D   NOERROR] SOA    (36)e6488538-41c3-4696-bd75-34c9589316df(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5161100 UDP Snd ::1             05eb R Q [8085 A DR  NOERROR] SOA    (36)e6488538-41c3-4696-bd75-34c9589316df(6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5159CC0 UDP Rcv ::1             6181   Q [0001   D   NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F5159CC0 UDP Snd ::1             6181 R Q [8085 A DR  NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F515B9D0 UDP Rcv 192.168.66.21   e54a   U [0028       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 0530 PACKET  00000020F515B9D0 UDP Snd 192.168.66.21   e54a R U [00a8       NOERROR] SOA    (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510C7A0 UDP Rcv ::1             3c59   Q [0001   D   NOERROR] NS     (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
+
+2017-05-21 19:50:00 05C8 PACKET  00000020F510C7A0 UDP Snd ::1             3c59 R Q [8085 A DR  NOERROR] NS     (6)_msdcs(2)adlabs01(5)virot(2)eu(0)
