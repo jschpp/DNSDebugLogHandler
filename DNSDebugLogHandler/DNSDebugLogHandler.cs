@@ -2,6 +2,7 @@
 using System.Management.Automation;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 /* This module is based on the excellent DNSLogModule https://github.com/virot/DNSLogModule by virot https://github.com/virot
  * It was ported with his permission.
@@ -9,12 +10,32 @@ using System.Text.RegularExpressions;
 
 namespace DNSDebugLogHandler
 {
-    [Cmdlet(VerbsData.Import, "DNSDebugLog", ConfirmImpact = ConfirmImpact.None)]
+    [Cmdlet(VerbsData.Import, "DNSDebugLog", ConfirmImpact = ConfirmImpact.None, HelpUri = "https://github.com/jschpp/DNSDebugLogHandler/blob/main/DNSDebugLogHandler/docs/Import-DNSDebugLog.md")]
     public class ImportDNSDebugLog : PSCmdlet, IDisposable
     {
         [Parameter(Position = 1, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true, Mandatory = true)]
         [ValidateNotNullOrEmpty()]
         public string Path { get; set; }
+
+        [Parameter(Mandatory = false)]
+        public CultureInfo Culture
+        {
+            get
+            {
+                return this.Culture;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    this.Culture = System.Globalization.CultureInfo.CurrentCulture;
+                }
+                else
+                {
+                    this.Culture = value;
+                }
+            }
+        }
 
         private const string regexPattern = @"^
                                                                         # Date in multiple locales TODO: maybe use TryParse here and don't try regex
@@ -86,7 +107,7 @@ namespace DNSDebugLogHandler
                     DNSLogEntry entry = new DNSLogEntry
                     {
                         ClientIP = m.Groups["ip"].Value.Trim(),
-                        DateTime = DateTime.TryParse(m.Groups["date"].Value.Trim(), out DateTime dt) ? dt : DateTime.MinValue,
+                        DateTime = DateTime.TryParse(m.Groups["date"].Value.Trim(), Culture, DateTimeStyles.None, out DateTime dt) ? dt : DateTime.MinValue,
                         QR = DNSLogEntry.ParseQR(m.Groups["QR"].Value),
                         OpCode = DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value),
                         Way = m.Groups["way"].Value.Trim(),
