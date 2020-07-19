@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet publish --no-build&#xD;&#xA;powershell -File $(ProjectDir)\build.ps1 -TargetPath $(TargetPath) -Destination $(ProjectDir)\PowerShell\lib" />
+    <Exec Command="dotnet publish --no-build&#xD;&#xA;powershell -File $(ProjectDir)\build.ps1 -TargetPath $(TargetPath) -ProjectDir $(ProjectDir)" />
   </Target>
 
 </Project>
