@@ -26,8 +26,14 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
+    
+- task: PowerShell@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    filePath: '$(System.DefaultWorkingDirectory)\DNSDebugLogHandler\build.ps1'
+    arguments: '-ProjectDir "$(System.DefaultWorkingDirectory)\DNSDebugLogHandler" -TargetPath "$(System.DefaultWorkingDirectory)\DNSDebugLogHandler\bin\Release\netstandard2.0\DNSDebugLogHandler.dll"'
+    
+- task: Pester@10
+  inputs:
+    scriptFolder: '$(System.DefaultWorkingDirectory)\*'
+    resultsFile: '$(System.DefaultWorkingDirectory)\Test-Pester.XML'
+    usePSCore: False
