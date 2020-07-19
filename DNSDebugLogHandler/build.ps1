@@ -16,5 +16,3 @@ $OutputPath = Join-Path -Path $ProjectDir -ChildPath $OutDir
 Copy-Item -Path $TargetPath -Destination $LibPath
 
 New-ExternalHelp -Path $DocSrcPath -OutputPath $DocPath
-
-nuget pack $NugetSpec -Version $ModuleInfo.Version -BasePath $NewModulePath -OutputDirectory $OutputPath -exclude "*.gitkeep"
