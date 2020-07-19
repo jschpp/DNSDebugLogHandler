@@ -1,5 +1,7 @@
 # DNS Debug Logfile handler
 
+[![Build Status](https://dev.azure.com/jschoepp/DNSDebugLogHandler/_apis/build/status/jschpp.DNSDebugLogHandler?branchName=main)](https://dev.azure.com/jschoepp/DNSDebugLogHandler/_build/latest?definitionId=1&branchName=main)
+
 This module parses dns debug log files.
 
 At this moment it is only build for PowerShell Version 7 and up.
