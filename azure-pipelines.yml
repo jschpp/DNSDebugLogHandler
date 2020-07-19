@@ -21,7 +21,7 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: PowerShell@1
+- task: PowerShell@2
   inputs:
     filePath: '$(System.DefaultWorkingDirectory)\DNSDebugLogHandler\dependency.ps1'
     arguments: ''
