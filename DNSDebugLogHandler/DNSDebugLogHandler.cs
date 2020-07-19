@@ -13,7 +13,7 @@ namespace DNSDebugLogHandler
     [Cmdlet(VerbsData.Import, "DNSDebugLog", ConfirmImpact = ConfirmImpact.None, HelpUri = "https://github.com/jschpp/DNSDebugLogHandler/blob/main/DNSDebugLogHandler/docs/Import-DNSDebugLog.md")]
     public class ImportDNSDebugLog : PSCmdlet, IDisposable
     {
-        [Parameter(Position = 1, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true, Mandatory = true)]
+        [Parameter(Position = 0, ValueFromPipeline = true, ValueFromPipelineByPropertyName = true, Mandatory = true)]
         [ValidateNotNullOrEmpty()]
         public string Path { get; set; }
 
