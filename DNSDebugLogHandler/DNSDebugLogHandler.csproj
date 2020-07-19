@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -7,11 +7,6 @@
     <StartupObject />
     <AssemblyName>DNSDebugLogHandler</AssemblyName>
     <RootNamespace>DNSDebugLogHandler</RootNamespace>
-    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath></OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,10 +20,11 @@
   <ItemGroup>
     <Folder Include="PowerShell\lib\" />
     <Folder Include="Tests\" />
+    <Folder Include="docs\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="dotnet publish --no-build&#xD;&#xA;powershell -File $(ProjectDir)\build.ps1 -TargetPath $(TargetPath) -ProjectDir $(ProjectDir)" />
+    <Exec Command="powershell -File $(ProjectDir)\build.ps1 -TargetPath $(TargetPath) -ProjectDir $(ProjectDir) -OutDir $(OutDir)" />
   </Target>
 
 </Project>
