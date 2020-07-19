@@ -8,7 +8,7 @@ schema: 2.0.0
 # Import-DNSDebugLog
 
 ## SYNOPSIS
-This imports DNS Debug log files.
+Imports DNS Debug log files.
 
 ## SYNTAX
 
@@ -17,7 +17,11 @@ Import-DNSDebugLog [-Path] <String> [[-Culture] <CultureInfo>] [<CommonParameter
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Imports and parses DNS Debug log files.
+
+Since the timestamp within the log files is culture specific this command will try to
+parse the timestamp with the current culture. Should this not work specify the culture
+with -Culture
 
 ## EXAMPLES
 
