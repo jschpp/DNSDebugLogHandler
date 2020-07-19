@@ -1,8 +1,14 @@
-﻿Import-Module platyPS
+﻿# Requires -Module platyPS
 param (
     [string] $TargetPath,
     [string] $ProjectDir
 )
-$Destination = [System.IO.Path]::Combine($ProjectDir, "PowerShell", "lib")
+
+$NewModulePath = Join-Path -Path $ProjectDir -ChildPath "PowerShell"
+$LibPath = Join-Path -Path $NewModulePath -ChildPath "lib"
+$DocSrcPath = Join-Path -Path $ProjectDir -ChildPath "docs"
+$DocPath = Join-Path -Path $NewModulePath -ChildPath "en-US"
 
 Copy-Item -Path $TargetPath -Destination $Destination
+
+New-ExternalHelp -Path $DocSrcPath -OutputPath $DocPath

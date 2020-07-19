@@ -341,3 +341,4 @@ healthchecksdb
 
 # Compiled Library
 DNSDebugLogHandler/Powershell/lib/*.dll
+DNSDebugLogHandler/PowerShell/en-US/*.xml
