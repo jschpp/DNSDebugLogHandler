@@ -1,5 +1,5 @@
 ﻿param (
-    [Parametermeter(Mandatory=$true)]
+    [Parameter(Mandatory=$true)]
     [string] $ApiKey
 )
 $ModuleName = "DNSDebugLogHandler"
