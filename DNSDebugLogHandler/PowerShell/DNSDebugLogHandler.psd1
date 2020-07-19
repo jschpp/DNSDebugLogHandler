@@ -24,7 +24,7 @@ GUID = 'a8a74f08-ad2c-4a75-b95c-d7558c522112'
 Author = 'Johannes Schöpp'
 
 # Company or vendor of this module
-CompanyName = 'Unknown'
+CompanyName = ''
 
 # Copyright statement for this module
 Copyright = '(c) Johannes Schöpp. All rights reserved.'
@@ -33,7 +33,7 @@ Copyright = '(c) Johannes Schöpp. All rights reserved.'
 Description = 'Parse DNS Debug logfiles'
 
 # Minimum version of the PowerShell engine required by this module
-# PowerShellVersion = ''
+PowerShellVersion = '5.1'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
@@ -42,7 +42,7 @@ Description = 'Parse DNS Debug logfiles'
 # PowerShellHostVersion = ''
 
 # Minimum version of Microsoft .NET Framework required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
-# DotNetFrameworkVersion = ''
+DotNetFrameworkVersion = '4.6.1'
 
 # Minimum version of the common language runtime (CLR) required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
 # ClrVersion = ''
@@ -69,16 +69,16 @@ FormatsToProcess = @("Format/DNSDebugLogHandler.DNSEntry.Format.ps1xml")
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = '*'
+FunctionsToExport = ''
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = 'Import-DNSDebugLog'
 
 # Variables to export from this module
-VariablesToExport = '*'
+VariablesToExport = ''
 
 # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-AliasesToExport = '*'
+AliasesToExport = ''
 
 # DSC resources to export from this module
 # DscResourcesToExport = @()
@@ -101,7 +101,7 @@ PrivateData = @{
         # LicenseUri = ''
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/jschpp/DNSDebugLogHandler'
 
         # A URL to an icon representing this module.
         # IconUri = ''
