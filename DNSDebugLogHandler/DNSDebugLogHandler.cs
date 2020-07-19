@@ -20,7 +20,7 @@ namespace DNSDebugLogHandler
                                                                         # Date in multiple locales TODO: maybe use TryParse here and don't try regex
             (?<date>([0-9]{1,2}.[0-9]{1,2}.[0-9]{2,4}|[0-9]{2,4}-[0-9]{2}-[0-9]{2})\s*[0-9: ]{7,8}\s*(PM|AM)?)\s
             ([0-9A-Z]{3,4}\sPACKET\s*[0-9A-Za-z]{8,16})\s               # Packet information
-            (UDP|TCP)\s
+            (?<prot>UDP|TCP)\s
             (?<way>Snd|Rcv)\s
             (?<ip>[0-9.]{7,15}|[0-9a-f:]{3,50})\s*([0-9a-z]{4})\s       # IP Address IPv4 or IPv6
             (?<QR>.)\s
@@ -90,6 +90,7 @@ namespace DNSDebugLogHandler
                         QR = DNSLogEntry.ParseQR(m.Groups["QR"].Value),
                         OpCode = DNSLogEntry.ParseOpCode(m.Groups["OpCode"].Value),
                         Way = m.Groups["way"].Value.Trim(),
+                        Protocol = m.Groups["prot"].Value,
                         QuestionType = m.Groups["QuestionType"].Value.Trim(),
                         Question = m.Groups["Question"].Value.Trim()
                     };
@@ -140,6 +141,7 @@ namespace DNSDebugLogHandler
         public string QR { get; set; }
         public string OpCode { get; set; }
         public string Way { get; set; }
+        public string Protocol { get; set; }
         public string QuestionType { get; set; }
         public string Question { get; set; }
 
