@@ -18,24 +18,7 @@ namespace DNSDebugLogHandler
         public string Path { get; set; }
 
         [Parameter(Mandatory = false)]
-        public CultureInfo Culture
-        {
-            get
-            {
-                return this.Culture;
-            }
-            set
-            {
-                if (value == null)
-                {
-                    this.Culture = System.Globalization.CultureInfo.CurrentCulture;
-                }
-                else
-                {
-                    this.Culture = value;
-                }
-            }
-        }
+        public CultureInfo Culture { get; set; }
 
         private const string regexPattern = @"^
                                                                         # Date in multiple locales TODO: maybe use TryParse here and don't try regex
@@ -57,6 +40,12 @@ namespace DNSDebugLogHandler
 
         protected override void BeginProcessing()
         {
+            // Check for Culture 
+            if (Culture == null)
+            {
+                Culture = System.Globalization.CultureInfo.CurrentCulture;
+            }
+
             // always resolve path to handle PS specific paths and relative paths
             Path = GetUnresolvedProviderPathFromPSPath(Path);
 
