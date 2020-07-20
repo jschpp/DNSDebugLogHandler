@@ -1,4 +1,8 @@
-﻿# 1.0.2
+﻿# 1.0.3
+
+* `Import-DNSDebugLog` can now open logs which are still being written to
+
+# 1.0.2
 
 * modified Tags
 
