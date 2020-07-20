@@ -51,7 +51,7 @@ namespace DNSDebugLogHandler
 
             try
             {
-                file = new StreamReader(Path);
+                file = new StreamReader(new FileStream(Path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
             }
             catch (FileNotFoundException ex)
             {
