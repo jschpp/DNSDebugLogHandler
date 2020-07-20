@@ -27,7 +27,7 @@ Author = 'Johannes Schoepp'
 CompanyName = ''
 
 # Copyright statement for this module
-Copyright = '(c) Johannes Schöpp. All rights reserved.'
+Copyright = '(c) Johannes Schoepp. All rights reserved.'
 
 # Description of the functionality provided by this module
 Description = @"
