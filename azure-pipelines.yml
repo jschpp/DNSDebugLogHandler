@@ -1,46 +1,41 @@
-# .NET Desktop
-# Build and run tests for .NET Desktop or Windows classic desktop solutions.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
 trigger:
-- main
-- dev
+  tags:
+    include:
+    - '*'
+  branches:
+    include:
+    - main
+    - dev
 
 pool:
   vmImage: 'windows-latest'
 
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-
 steps:
 - task: NuGetToolInstaller@1
 
-- task: NuGetCommand@2
+- task: PowerShell@2
   inputs:
-    restoreSolution: '$(solution)'
+    filePath: '$(System.DefaultWorkingDirectory)\build\installBuildDependencies.ps1'
+    arguments: ''
 
 - task: PowerShell@2
   inputs:
-    filePath: '$(System.DefaultWorkingDirectory)\DNSDebugLogHandler\dependency.ps1'
+    filePath: '$(System.DefaultWorkingDirectory)\build.ps1'
     arguments: ''
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    
-- task: Pester@10
-  inputs:
-    scriptFolder: '$(System.DefaultWorkingDirectory)\*'
-    resultsFile: '$(System.DefaultWorkingDirectory)\Test-Pester.XML'
-    usePSCore: False
 
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'NUnit'
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/*-nunit.xml'
     failTaskOnFailedTests: true
+
+- task: PowerShell@2
+  condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
+  inputs:
+    filePath: '$(System.DefaultWorkingDirectory)\build.ps1'
+    arguments: '-Apikey $(PSGalleryApiKey) -Publish'

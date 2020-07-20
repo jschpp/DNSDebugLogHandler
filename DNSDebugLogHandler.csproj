@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PowerShellStandard.Library" Version="7.0.0-preview.1" />
+    <PackageReference Include="PowerShellStandard.Library" Version="7.0.0-preview.1" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,9 +22,5 @@
     <Folder Include="Tests\" />
     <Folder Include="docs\" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="powershell -File $(ProjectDir)\build.ps1 -TargetPath $(TargetPath) -ProjectDir $(ProjectDir) -OutDir $(OutDir)" />
-  </Target>
 
 </Project>

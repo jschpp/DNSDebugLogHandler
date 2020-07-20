@@ -5,7 +5,7 @@
 
 BeforeAll {
     Get-Module DNSDebugLogHandler | Remove-Module
-    Import-Module "$PSScriptRoot\..\PowerShell\DNSDebugLogHandler.psd1" -ErrorAction Stop
+    Import-Module "$PSScriptRoot\..\DNSDebugLogHandler\DNSDebugLogHandler.psd1" -ErrorAction Stop
     $ExampleData = Join-Path -Path $PSScriptRoot -ChildPath "Example-Data"
 }
 

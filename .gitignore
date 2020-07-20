@@ -339,6 +339,7 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-# Compiled Library
-DNSDebugLogHandler/Powershell/lib/*.dll
-DNSDebugLogHandler/PowerShell/en-US/*.xml
+# Compiled package
+DNSDebugLogHandler/**
+/DNSDebugLogHandler-nunit.xml
+/pester-codecoverage.xml
