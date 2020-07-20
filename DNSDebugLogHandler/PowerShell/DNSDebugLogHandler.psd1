@@ -103,8 +103,7 @@ PrivateData = @{
             "DNS",
             "parsing",
             "log",
-            "logfile",
-            "DNS Debug Log"
+            "logfile"
         )
 
         # A URL to the license for this module.
